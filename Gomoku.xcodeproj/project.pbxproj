@@ -12,8 +12,12 @@
 		BB4812191E157BE90015F145 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB4812171E157BE90015F145 /* Main.storyboard */; };
 		BB48121B1E157BE90015F145 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB48121A1E157BE90015F145 /* Assets.xcassets */; };
 		BB48121E1E157BE90015F145 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB48121C1E157BE90015F145 /* LaunchScreen.storyboard */; };
-		BB4812291E157BE90015F145 /* GomokuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4812281E157BE90015F145 /* GomokuTests.swift */; };
 		BB4812341E157BE90015F145 /* GomokuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4812331E157BE90015F145 /* GomokuUITests.swift */; };
+		BB4812421E157C720015F145 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4812411E157C720015F145 /* ViewControllerTests.swift */; };
+		BB4812441E1582EE0015F145 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4812431E1582ED0015F145 /* Game.swift */; };
+		BB4812461E15838E0015F145 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4812451E15838E0015F145 /* GameTests.swift */; };
+		BB4812481E15856F0015F145 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4812471E15856F0015F145 /* Move.swift */; };
+		BB48124A1E1585810015F145 /* MoveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4812491E1585810015F145 /* MoveTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +46,15 @@
 		BB48121D1E157BE90015F145 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB48121F1E157BE90015F145 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB4812241E157BE90015F145 /* GomokuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GomokuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB4812281E157BE90015F145 /* GomokuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GomokuTests.swift; sourceTree = "<group>"; };
 		BB48122A1E157BE90015F145 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB48122F1E157BE90015F145 /* GomokuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GomokuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB4812331E157BE90015F145 /* GomokuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GomokuUITests.swift; sourceTree = "<group>"; };
 		BB4812351E157BE90015F145 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB4812411E157C720015F145 /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		BB4812431E1582ED0015F145 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		BB4812451E15838E0015F145 /* GameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
+		BB4812471E15856F0015F145 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		BB4812491E1585810015F145 /* MoveTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,8 @@
 				BB48121A1E157BE90015F145 /* Assets.xcassets */,
 				BB48121C1E157BE90015F145 /* LaunchScreen.storyboard */,
 				BB48121F1E157BE90015F145 /* Info.plist */,
+				BB4812431E1582ED0015F145 /* Game.swift */,
+				BB4812471E15856F0015F145 /* Move.swift */,
 			);
 			path = Gomoku;
 			sourceTree = "<group>";
@@ -110,8 +120,10 @@
 		BB4812271E157BE90015F145 /* GomokuTests */ = {
 			isa = PBXGroup;
 			children = (
-				BB4812281E157BE90015F145 /* GomokuTests.swift */,
 				BB48122A1E157BE90015F145 /* Info.plist */,
+				BB4812411E157C720015F145 /* ViewControllerTests.swift */,
+				BB4812451E15838E0015F145 /* GameTests.swift */,
+				BB4812491E1585810015F145 /* MoveTests.swift */,
 			);
 			path = GomokuTests;
 			sourceTree = "<group>";
@@ -259,7 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB4812481E15856F0015F145 /* Move.swift in Sources */,
 				BB4812161E157BE90015F145 /* ViewController.swift in Sources */,
+				BB4812441E1582EE0015F145 /* Game.swift in Sources */,
 				BB4812141E157BE90015F145 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +282,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB4812291E157BE90015F145 /* GomokuTests.swift in Sources */,
+				BB48124A1E1585810015F145 /* MoveTests.swift in Sources */,
+				BB4812421E157C720015F145 /* ViewControllerTests.swift in Sources */,
+				BB4812461E15838E0015F145 /* GameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
