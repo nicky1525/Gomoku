@@ -19,12 +19,14 @@ a struct of Coordinates and Player
 #### Moves
 a collection of Move
 
-#### Game
-orchestrates the Move collection, stores the CurrentTurn and contains the game logic
+#### GameModel
+orchestrates the Move collection, stores the CurrentTurn
 
 
-### Game Methods
+### GameManager 
+contains the game logic
 
+Methods:
 #### Reset()
 Resets the game to the initial state, restoring the Moves collection to be empty.
 
@@ -35,7 +37,7 @@ Adds the new Move to the Moves collection.
 Checks the given coordinates to see if there is a winner. It takes a coordinate for performance reasons, because we can avoid checking everything if we just check for the latest move. In the context of this method, the given coordinate is the origin for the purpose of checking.
 
 
-### GameDelegate Methods
+### GameManagerDelegate Methods
 
 #### Render(coordinates, player)
 Tells the view to update the grid with the latest move when nobody won.
