@@ -521,6 +521,7 @@
 				BB48123A1E157BE90015F145 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BB48123B1E157BE90015F145 /* Build configuration list for PBXNativeTarget "GomokuTests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +530,7 @@
 				BB48123D1E157BE90015F145 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BB48123E1E157BE90015F145 /* Build configuration list for PBXNativeTarget "GomokuUITests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +539,7 @@
 				BB4812401E157BE90015F145 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

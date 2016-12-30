@@ -6,7 +6,10 @@ enum Shape {
     case O
 }
 
+typealias Coordinates = (x: Int, y: Int)
+
 struct Game {
     let moves: [Move] = []
     let currentTurn: Shape = .X
+    
 }
