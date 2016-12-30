@@ -1,15 +1,15 @@
 
 import Foundation
 
-enum Shape {
-    case X
-    case O
+enum Player {
+    case Black
+    case White
 }
 
 typealias Coordinates = (x: Int, y: Int)
 
 struct Game {
     let moves: [Move] = []
-    let currentTurn: Shape = .X
+    let currentTurn: Player = .White
     
 }

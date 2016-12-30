@@ -18,7 +18,7 @@ class GameTests: XCTestCase {
         XCTAssertEqual(game.moves.count, 0)
     }
     
-    func testFirstTurnIsX() {
-        XCTAssertEqual(game.currentTurn, .X)
+    func testFirstTurnIsWhite() {
+        XCTAssertEqual(game.currentTurn, .White)
     }
 }

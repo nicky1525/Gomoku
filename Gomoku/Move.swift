@@ -2,10 +2,11 @@
 import Foundation
 
 struct Move {
-    var coordinates:Coordinates?
+    var coordinates:Coordinates
+    var player:Player
     
-    init(coordinates:Coordinates) {
+    init(coordinates:Coordinates, player:Player) {
         self.coordinates = coordinates
+        self.player = player
     }
-    
 }
