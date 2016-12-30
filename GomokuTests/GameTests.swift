@@ -3,11 +3,11 @@ import XCTest
 @testable import Gomoku
 
 class GameTests: XCTestCase {
-    var game:Game!
+    var game:GameModel!
     
     override func setUp() {
         super.setUp()
-        game = Game()
+        game = GameModel()
     }
     
     override func tearDown() {

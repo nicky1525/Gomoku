@@ -8,8 +8,7 @@ enum Player {
 
 typealias Coordinates = (x: Int, y: Int)
 
-struct Game {
+struct GameModel {
     let moves: [Move] = []
     let currentTurn: Player = .White
-    
 }
