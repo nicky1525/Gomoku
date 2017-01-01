@@ -33,8 +33,8 @@ Resets the game to the initial state, restoring the Moves collection to be empty
 #### AddMove(Move)
 Adds the new Move to the Moves collection.
 
-#### CheckForWinner(Coordinates)
-Checks the given coordinates to see if there is a winner. It takes a coordinate for performance reasons, because we can avoid checking everything if we just check for the latest move. In the context of this method, the given coordinate is the origin for the purpose of checking.
+#### CheckForWinner(Move, Moves)
+Checks the given last move to see if there is a winner. It takes a move for performance reasons, because we can avoid checking everything if we just check for the latest move. In the context of this method, the given move is the origin for the purpose of checking.
 
 
 ### GameManagerDelegate Methods

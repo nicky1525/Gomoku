@@ -19,5 +19,3 @@ struct GameModel {
         self.currentTurn = currentTurn
     }
 }
-
-
