@@ -113,4 +113,17 @@ class GameManagerTests: XCTestCase {
         
         XCTAssert(manager.checkForWinner(winningMove, moves) == .White)
     }
+    
+    func testWinnerIsWhite_InnerMove() {
+        let moves = [
+            Move(coordinates: (0,4), player: .White),
+            Move(coordinates: (4,0), player: .White),
+            Move(coordinates: (2,2), player: .White),
+            Move(coordinates: (1,3), player: .White)
+        ]
+        let winningMove =
+            Move(coordinates: (3,1), player: .White)
+        
+        XCTAssert(manager.checkForWinner(winningMove, moves) == .White)
+    }
 }
