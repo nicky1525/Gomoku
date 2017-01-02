@@ -14,26 +14,75 @@ struct GameManager {
     }
     
     func checkForWinner(_ move: Move, _ moves: [Move]) -> Player? {
-        let origin = move.coordinates
+        let coords = move.coordinates
         let player = move.player
-//        let origin, player = move.coordinates, move.player
         
-        if moves.contains(where: { $0.coordinates == (origin.x-1, origin.y) && $0.player == player }) &&
-           moves.contains(where: { $0.coordinates == (origin.x-2, origin.y) && $0.player == player }) &&
-           moves.contains(where: { $0.coordinates == (origin.x+1, origin.y) && $0.player == player }) &&
-           moves.contains(where: { $0.coordinates == (origin.x+2, origin.y) && $0.player == player }) {
+        if  moves.contains(where: { $0.coordinates == (coords.x-1, coords.y) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x-2, coords.y) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x+1, coords.y) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x+2, coords.y) && $0.player == player }) {
             return player
         }
-        
-        if moves.contains(where: {
-            $0.coordinates == (origin.x, origin.y-1) && $0.player == player }) &&
-            moves.contains(where: {
-                $0.coordinates == (origin.x, origin.y-2) && $0.player == player }) &&
-            moves.contains(where: { $0.coordinates == (origin.x, origin.y+1) && $0.player == player }) &&
-            moves.contains(where: { $0.coordinates == (origin.x, origin.y+2) && $0.player == player }) {
+        if  moves.contains(where: { $0.coordinates == (coords.x, coords.y-1) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x, coords.y-2) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x, coords.y+1) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x, coords.y+2) && $0.player == player }) {
             return player
         }
-        
+        if  moves.contains(where: { $0.coordinates == (coords.x-4, coords.y) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x-3, coords.y) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x-2, coords.y) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x-1, coords.y) && $0.player == player }) {
+            return player
+        }
+        if  moves.contains(where: { $0.coordinates == (coords.x+4, coords.y) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x+3, coords.y) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x+2, coords.y) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x+1, coords.y) && $0.player == player }) {
+            return player
+        }
+        if  moves.contains(where: { $0.coordinates == (coords.x, coords.y-4) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x, coords.y-3) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x, coords.y-2) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x, coords.y-1) && $0.player == player }) {
+            return player
+        }
+        if  moves.contains(where: { $0.coordinates == (coords.x, coords.y+4) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x, coords.y+3) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x, coords.y+2) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x, coords.y+1) && $0.player == player }) {
+            return player
+        }
+        if  moves.contains(where: { $0.coordinates == (coords.x+1, coords.y+1) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x+2, coords.y+2) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x+3, coords.y+3) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x+4, coords.y+4) && $0.player == player }) {
+            return player
+        }
+        if  moves.contains(where: { $0.coordinates == (coords.x-1, coords.y-1) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x-2, coords.y-2) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x-3, coords.y-3) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x-4, coords.y-4) && $0.player == player }) {
+            return player
+        }
+        if  moves.contains(where: { $0.coordinates == (coords.x+1, coords.y+1) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x+2, coords.y+2) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x-1, coords.y-1) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x-2, coords.y-2) && $0.player == player }) {
+            return player
+        }
+        if  moves.contains(where: { $0.coordinates == (coords.x+1, coords.y-1) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x+2, coords.y-2) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x+3, coords.y-3) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x+4, coords.y-4) && $0.player == player }) {
+            return player
+        }
+        if  moves.contains(where: { $0.coordinates == (coords.x-1, coords.y+1) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x-2, coords.y+2) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x-3, coords.y+3) && $0.player == player }) &&
+            moves.contains(where: { $0.coordinates == (coords.x-4, coords.y+4) && $0.player == player }) {
+            return player
+        }
         return nil
     }
 }
